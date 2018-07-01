@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="refresh" content="3000" >
+	<title>Form Validation</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+	<link rel="stylesheet" type="text/css" href="app.css">
+
+</head>
+<body>
+	<div class="container">
+		<h1>Contact Me</h1>
+		<div class="contact">
+				<div class="address">
+					<i class="fas fa-phone"></i>
+					<p><span class="label">phone</span><br>
+					<small class="phone">+213-555-555-555</small></p>
+				</div>
+				<div class="address">
+					<i class="fas fa-map-marker"></i>
+					<p><span class="label">location</span><br>
+					    <small>25000, Constantine, DZ</small></p>
+				</div>
+				<div class="address">
+					<i class="far fa-envelope"></i>
+					<p><span class="label">Email</span><br> <small>
+					    Myemail@mail.com</small></p>
+				</div>
+		</div>
+		<div class="form">
+			<div class="informations">
+				<div class="name">
+				    <input type="text" name="name" id="fullname" placeholder="Enter your Name" autocomplete="off"><span class="check" style="display: none;">&check;</span><span class="star">∗</span>
+				    <div><small id="nameerrors" class="msgerrors"></small></div>
+				</div>
+				<div class="email">
+					<input type="email" name="email" id="email" placeholder="Enter your Email" autocomplete="off"><span class="check" style="display: none;" >&check;</span><span class="star">∗</span>
+					<div><small id="emailerrors" class="msgerrors"></small></div>
+				</div>
+			</div>
+			<div class="message">
+				<textarea name="message" id="message" placeholder="Message"></textarea>
+				<div class="counter"><span id="numb">0</span> characters remaining</div>
+			</div>
+			<button id="btn" class="btn btndisabled" disabled >Send Message</button>
+		</div>
+	</div>
+
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

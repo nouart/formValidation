@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab|Oxygen|-apple-system|BlinkMacSystemFont|"Segoe UI"|"Helvetica Neue"|"Apple Color Emoji"');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+
+ }
+.container {
+	max-width: 70rem;
+	margin: 0 auto;
+	min-height: 100vh;
+	padding-right: 2.0rem;
+    padding-left: 2.0rem;
+}
+h1 {
+	text-align: center;
+	margin-bottom: 1.5rem ;
+	font-size: 3rem;
+	height: 4rem;
+
+}
+h1:before{
+	content:" ";
+	position: absolute;
+	width:80px;
+	height: 3px;
+	background-color: #404040;
+	margin-top: 70px;
+}
+.contact {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+
+}
+.contact .address {
+	display: flex;
+	font-family: 'Oxygen';
+	height: 3.5rem;
+	min-width: 15rem;
+	margin-top: 1rem ;
+	margin-bottom: 1rem;
+}
+.contact .address .label{
+	text-transform: uppercase;
+	font-weight: 600;
+	padding-top: 0;
+}
+.contact .address p{
+	margin-top: 0.1rem;
+	margin-left: 0.8rem;
+	padding: 0.2rem;
+}
+
+i {
+	width: 3.7rem;
+	height: 3.7rem;
+	border-radius: 50%;
+	background-color: #404040;
+	color: #fff;
+	padding: 1.2rem 1.4rem 1.1rem ;
+
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	padding: 0.8rem;
+  }
+  h1 {
+  	font-size: 2.5rem;
+  }
+  .contact  {
+    flex-direction: column;
+
+  }
+
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.form >.informations{
+	display: flex;
+	justify-content: space-between;
+	width:100%;
+	margin-top: 0.5rem;
+	/*border:1px solid red;*/
+
+}
+.emptyinput {
+  /* Your shadow css here */
+  border-color: #900;
+  outline: 0;
+  -moz-box-shadow:inset 0 1px 1px;
+  -webkit-box-shadow:inset 0 1px 1px rgba(204, 0, 0,.075), 0 0 8px rgba(230, 0, 0,.6);
+  box-shadow:inset 0 1px 1px rgba(204, 0, 0,.075), 0 0 8px rgba(230, 0, 0,.6);
+}
+
+textarea:focus,input:focus {
+  border-color: #999;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(100,100,100,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(100,100,100,.6);
+}
+
+.form >.informations >.name , .form >.informations > .email {
+	width: 100%;
+	/*border: 1px solid blue;*/
+}
+
+.form .informations .name > input, .form .informations  .email>input{
+
+	height: 4rem;
+	width: 90%;
+	border: 1px solid #ccc;
+	padding-left: 1.2rem;
+
+	margin-left: 0px;
+
+}
+.form .informations  .email>input{
+	width: 100%;
+}
+
+
+.form >.informations >.name >.star, .form >.informations  >.email >.star {
+	color: red;
+}
+.form .informations  .email>span{
+	position: absolute;
+	margin-left:20px;
+}
+.form .informations .name> .check, .informations  .email >.check {
+	color:#2ECC40;
+}
+
+.form .informations .name >span, .form .informations .email> span{
+	margin-left: 0.5rem;
+	font-size: 30px;
+	position: absolute;
+	display: inline;
+
+}
+
+.form .message {
+	width: 100%;
+	height: 10rem;
+}
+
+.form .msgerrors {
+	margin-left: 0.1rem;
+	margin-top: 0.5rem;
+	color:red;
+
+}
+.form .btn{
+
+	margin-top: 5rem;
+	height: 3rem;
+	width: 10rem;
+	color: #fff;
+	background-color: #404040;
+	border:none;
+	cursor: pointer;
+}
+
+.form .btndisabled{
+	margin-top: 5rem;
+	height: 3rem;
+	width: 10rem;
+	color: #fff;
+	background-color: #bfbfbf;
+	border:none;
+	cursor: not-allowed;
+}
+
+
+.form .message > textarea{
+	margin-top: 1.5rem;
+	border:1px solid #ccc;
+	height: 100%;
+	width: 100%;
+	padding-left: 1.5rem;
+	padding-top: 1.2rem;
+}
+
+
+@media screen and (max-width: 700px) {
+    .form  {
+        flex-direction: column;
+        align-items: center;
+    }
+    .form .informations {
+    	flex-direction: column;
+    	width:90vw;
+    }
+
+	.form .informations .name > input, .form .informations .email  > input{
+		min-height: 3rem;
+		width: 100%;
+		border: 1px solid #ccc;
+		padding-left: 1.5rem;
+	}
+}
+
+.counter {
+	margin-top: 0.2rem;
+	text-align: right;
+}
